@@ -1,32 +1,23 @@
-import React,{ useEffect } from "react";
+import React,{ useEffect, useState } from "react";
 import axios from "axios";
 
-const Navbar = ({setHerryBooks, setSherlockBooks}) =>{
-  
-    useEffect(() => {
-        // getherryBooks();
-        getSherlockBooks(); 
-    },[]);
-  
-    // function getherryBooks() {
-    //   return axios.get("https://www.googleapis.com/books/v1/volumes?q=Sherlock+Holmes")
-    //     .then((response) => setSherlockBooks(response.data.items))
-    //     .catch((error) => {
-    //       console.log(error);
-    //     });
-    // }
+const Navbar = ({setBookData}) =>{
 
-    function getSherlockBooks() {
-      return axios.get("https://www.googleapis.com/books/v1/volumes?q=Sherlock+Holmes")
-        .then((response) => setSherlockBooks(response.data.items))
-        .catch((error) => {
-          console.log(error);
-        });
+    useEffect(()=>{
+        // if(bookData.length <= 0){
+            fetchBookApi("harry potter") 
+            fetchBookApi("Sherlock Holmes")
+        // }
+    },[])
+
+    async function fetchBookApi(query){
+        const response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${query}`);
+
+        setBookData((preValue) =>[...preValue, ...response.data.items])
     }
 
     return(
         <div>
-            <h1>All headings</h1>
         </div>
     )
 }
