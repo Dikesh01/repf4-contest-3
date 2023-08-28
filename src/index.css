@@ -20,11 +20,142 @@ body{
 
 .bookDatails{
   display: flex;
+  /* gap: 25px; */
+  padding: 10px 40px;
+}
+
+#moreBooks{
+  margin: 30px 60px;
+}
+
+.details{
+  width: 90%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #71C5F461;
+  padding: 10px 40px;
+  box-sizing: border-box;
+
+}
+
+.details h4,p{
+  color:#FFFFFF80;
+}
+
+.spanClass span{
+  margin-right: 20px;
+  font-size: 14px;
+}
+
+.titleClass{
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
 }
 
 img{
-  min-width: 140px;
-  max-width: 140px;
-  min-height: 200px;
-  max-height: 200px;
+  min-width: 145px;
+  max-width: 145px;
+  min-height: 215px;
+  max-height: 215px;
+}
+
+.bookDatails img{
+  rotate: -5deg;
+  border-right: 8px solid #ffffff;
+}
+
+.buttons{
+  text-align: right;
+}
+
+.bookDatails button{
+  margin-left: 20px;
+  padding: 3px 20px;
+  background-color: transparent;
+  border: 1px solid #FFFFFF80;
+  color: #FFFFFF80;
+
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+  background-color: #292d31;
+  align-items: center;
+  height: 60px;
+}
+
+.left_div{
+  display: flex;
+  align-items: center;
+}
+
+.left_div h2{
+  font-weight:400;
+
+}
+
+.images_Class{
+  display: flex;
+  align-items: center;
+}
+
+.middle_div{
+  color: #abb3b6;
+  border-radius: 10px;
+}
+
+.middle_div img{
+  width: 30px;
+  height: 30px;
+}
+
+.middle_div input{
+  background-color: transparent;
+  border: none;
+  width: 400px;
+  margin-left: 20px;
+}
+
+.middle_div input:focus{
+  outline: none;
+}
+
+.middle_div button{
+  margin-left: 10px;
+  padding: 5px 40px;
+  background-color: transparent;
+  border: 1px solid #4a4d4e;
+  color: #777b7c;
+}
+
+#inputSearch{
+  background-color: #4a4d4e;
+  padding: 4px 20px ;
+  border-radius: 3px;
+}
+
+#book{
+  font-size: 16px;
+  color: #777b7c;
+}
+
+.images_Class{
+  display: flex;
+  gap: 10px;
+}
+
+.images_Class img {
+  width: 50px;
+  height: 20px;
+}
+
+
+#group{
+  width: 200px;
+  height: 150px;
 }
