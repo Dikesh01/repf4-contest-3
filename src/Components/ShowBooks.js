@@ -10,7 +10,7 @@ const ShowBooks = ({bookData}) =>{
     // }
 
     return(
-        <div >
+        <div className="displayBooks">
             <div > 
                 {
                     bookDetails && 
@@ -23,7 +23,7 @@ const ShowBooks = ({bookData}) =>{
                                     <p>Published on : {bookDetails.publishedDate}</p>
                                 </div>
                                 <h4>{bookDetails.authors[0]}</h4>
-                                <p>{bookDetails.description}</p>
+                                <p>{bookDetails.description.slice(0,150)}...</p>
                                 <div className="spanClass">
                                     <span>AVG Rating : {bookDetails.averageRating}</span>
                                     <span>Rating Count : {bookDetails.ratingsCount}</span>

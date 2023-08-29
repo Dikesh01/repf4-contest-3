@@ -25,27 +25,28 @@ const Navbar = ({setBookData}) =>{
 
     return(
         <div className="navbar">
+            
             <div className="left_div">
-                {/* <img src={vector} alt="#" /> */}
-                <p>Vector</p>
+                <img src={vector} alt="#" />
                 <h2>KeazoN<span id="book">BOOKS</span></h2>
             </div>
+
             <div className="middle_div">
-                <span id="inputSearch">
+                <div id="inputSearch">
                     <img src={search} alt='#coolar'/>
                     <input type="text" placeholder="Search for the book you want and read it now... Sherlock Holmes, Harry Pot..."/>
-                </span>
+                </div>
                 <button>Search</button>
             </div>
             <div className="images_Class">
-                {/* <img id="like" src="https://images.unsplash.com/photo-1614027164847-1b28cfe1df60?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D&w=1000&q=80" alt="like" />
+                <img src={like} alt="like" />
                 <img src={notification} alt="notification" />
                 <img src={diamond} alt="diamond" />
-                <img src={profile} alt="profile" /> */}
-                <p>like</p>
+                <img src={profile} alt="profile" />
+                {/* <p>like</p>
                 <p>notification</p>
                 <p>diamond</p>
-                <p>profile</p>
+                <p>profile</p> */}
             </div>
         </div>
     )
